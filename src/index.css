@@ -6,6 +6,8 @@ body {
   background: #fffefc;
   color: #181614;
   -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 a { color: inherit; }
 img { max-width: 100%; }
@@ -181,6 +183,8 @@ img { max-width: 100%; }
   .facility__image { order: 1; }
   .facility__text { order: 2; }
   .business__collage { height: auto; grid-template-columns: 1fr 1fr; }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-card__label { flex-direction: column; align-items: flex-start; gap: 4px; }
 
   .nav__toggle { display: flex; }
   .nav__links {
@@ -205,4 +209,26 @@ img { max-width: 100%; }
   }
   .nav__links.is-open { max-height: 480px; opacity: 1; pointer-events: auto; overflow-y: auto; }
   .nav__link { padding: 12px 4px; }
+}
+
+@media (max-width: 600px) {
+  .container, .nav__inner, .footer__inner { padding-left: 20px; padding-right: 20px; }
+  .nav__links { padding-left: 20px; padding-right: 20px; }
+  .process-grid { grid-template-columns: 1fr; }
+
+  .hero { padding-top: 56px; padding-bottom: 64px; }
+  .hero__title { font-size: 32px; }
+  .hero__desc { font-size: 15px; margin-bottom: 32px; }
+  .hero__stats { gap: 24px; margin-top: 40px; padding-top: 28px; }
+  .hero__stat-value { font-size: 21px; }
+
+  .section { padding-top: 64px; padding-bottom: 64px; }
+  .section-title { font-size: 25px; }
+  .section-desc { font-size: 14px; }
+
+  .contact__title { font-size: 28px; }
+  .contact__desc { font-size: 15px; }
+
+  .quote-banner p { font-size: 17px; }
+  .stats-banner__value { font-size: 22px; }
 }
