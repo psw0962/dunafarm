@@ -1,8 +1,7 @@
 import Reveal from './Reveal';
 
 const CERTS = [
-  { img: 'cert-haccp1', title: 'HACCP 인증서', desc: '식품안전관리인증기준(HACCP) 적용업소 인증서 보유' },
-  { img: 'cert-biz', title: '사업자등록증', desc: '일반과세자 · 식품제조·가공업 등록 완료' },
+  { img: 'cert-haccp', title: 'HACCP 인증서', desc: '식품안전관리인증기준(HACCP) 적용업소 인증서 보유' },
   { img: 'cert-license', title: '영업등록증', desc: '식품제조·가공업 영업 등록 완료' },
 ];
 
@@ -25,7 +24,7 @@ export default function Quality() {
           유지합니다.
         </p>
       </Reveal>
-      <div className="grid-3">
+      <div className="cert-grid">
         {CERTS.map((c) => (
           <Reveal as="div" className="cert-card" key={c.title}>
             <div className="cert-card__thumb">
@@ -39,15 +38,20 @@ export default function Quality() {
         ))}
       </div>
       <div className="quality-panel">
-        <div className="quality-panel__title">철저한 품질관리 시스템</div>
-        <div className="grid-5">
+        <div className="quality-panel__head">
+          <div className="eyebrow">QUALITY MANAGEMENT</div>
+          <div className="quality-panel__title">철저한 품질관리 시스템</div>
+        </div>
+        <div className="quality-list">
           {QUALITY_ITEMS.map((item) => (
-            <Reveal as="div" key={item.title}>
+            <Reveal as="div" className="quality-item" key={item.title}>
               <div className="quality-item__icon">
                 <img src={`/assets/icons/${item.icon}.svg`} alt="" />
               </div>
-              <div className="quality-item__title">{item.title}</div>
-              <div className="quality-item__desc">{item.desc}</div>
+              <div className="quality-item__body">
+                <div className="quality-item__title">{item.title}</div>
+                <div className="quality-item__desc">{item.desc}</div>
+              </div>
             </Reveal>
           ))}
         </div>

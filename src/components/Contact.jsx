@@ -11,11 +11,14 @@ export default function Contact() {
           </p>
           <div className="rep-card">
             <div className="rep-card__label">담당자</div>
-            <div className="rep-card__name">담당자 이름 · 직급</div>
-            <div className="rep-card__line">010-0000-0000</div>
-            <div className="rep-card__line">sales@dunafarm.co.kr</div>
+            <div className="rep-card__name">한재훈 · 영업과장</div>
+            <div className="rep-card__line">TEL. <a href="tel:+821090137501">010-9013-7501</a></div>
+            <div className="rep-card__line">FAX. 031-354-6845</div>
+            <div className="rep-card__line">
+              EMAIL. <a href="mailto:jaehun348@naver.com">jaehun348@naver.com</a>
+            </div>
           </div>
-          <div className="contact__address">경기도 화성시 향남읍 길성안길 90-4</div>
+          <div className="contact__address">경기도 화성시 만세구 향남읍 길성안길 90-8</div>
         </div>
         <div className="contact__image">
           <img src="/assets/contact-pour.jpg" alt="두나팜 고춧가루" />
@@ -23,10 +26,6 @@ export default function Contact() {
       </div>
       <div className="footer">
         <div className="footer__inner">
-          <div className="footer__brand">
-            <div className="footer__brand-mark">DF</div>
-            <span className="footer__brand-name">두나팜 DUNAFARM</span>
-          </div>
           <span className="footer__copy">© 2026 DUNAFARM. All rights reserved.</span>
         </div>
       </div>

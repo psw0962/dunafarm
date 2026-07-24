@@ -27,13 +27,9 @@ export default function Nav() {
   return (
     <nav className="nav">
       <div className="nav__inner">
-        <div className="brand">
-          <div className="brand__mark">DF</div>
-          <div className="brand__name">
-            <span className="brand__ko">두나팜</span>
-            <span className="brand__en">DUNAFARM</span>
-          </div>
-        </div>
+        <a className="brand" href="#hero" aria-label="두나팜 DUNAFARM 홈" onClick={closeMenu}>
+          <img className="brand__logo" src="/assets/logo.svg" alt="두나팜 DUNAFARM" />
+        </a>
         <div id="nav-menu" className={`nav__links${isOpen ? ' is-open' : ''}`}>
           {NAV_LINKS.map((link) => (
             <a key={link.href} className="nav__link" href={link.href} onClick={closeMenu}>
@@ -42,7 +38,7 @@ export default function Nav() {
           ))}
         </div>
         <div className="nav__right">
-          <a className="btn btn-sm btn-dark" href="#contact" onClick={closeMenu}>
+          <a className="btn btn-sm btn-dark" href="tel:+821090137501" onClick={closeMenu}>
             상담 문의
           </a>
           <button
