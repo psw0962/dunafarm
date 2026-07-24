@@ -92,22 +92,15 @@ export default function Product() {
   return (
     <section id="product" className="section section-soft">
       <div className="container">
-        <div className="product__top">
-          <Reveal as="div">
-            <div className="eyebrow">PRODUCT LINE</div>
-            <h2 className="section-title">
-              다양한 고춧가루
-              <br />
-              공급 품목
-            </h2>
-            <p className="section-desc">
-              국내산, 중국산, 베트남산까지 용도와 매운맛에 맞는 다양한 고춧가루를 공급합니다.
-            </p>
-          </Reveal>
-          <div className="product__image">
-            <img src="/assets/product-bag.jpg" alt="두나팜 고춧가루 제품" />
-          </div>
-        </div>
+        <Reveal as="div" className="product__top">
+          <div className="eyebrow">PRODUCT LINE</div>
+          <h2 className="section-title">
+            다양한 고춧가루 공급 품목
+          </h2>
+          <p className="section-desc">
+            국내산, 중국산, 베트남산까지 용도와 매운맛에 맞는 다양한 고춧가루를 공급합니다.
+          </p>
+        </Reveal>
 
         {PRODUCT_GROUPS.map((group) => (
           <div className="product-group" key={group.badge}>

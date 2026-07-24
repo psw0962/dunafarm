@@ -28,7 +28,7 @@ export default function Nav() {
     <nav className="nav">
       <div className="nav__inner">
         <a className="brand" href="#hero" aria-label="두나팜 DUNAFARM 홈" onClick={closeMenu}>
-          <img className="brand__logo" src="/assets/logo.svg" alt="두나팜 DUNAFARM" />
+          <img className="brand__logo" src="/assets/logo.png" alt="두나팜 DUNAFARM" />
         </a>
         <div id="nav-menu" className={`nav__links${isOpen ? ' is-open' : ''}`}>
           {NAV_LINKS.map((link) => (
