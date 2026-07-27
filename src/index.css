@@ -154,6 +154,13 @@ img { max-width: 100%; }
 .stats-banner__value { font-size: 32px; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
 .stats-banner__label { font-size: 14px; color: #b8b2a8; margin-top: 6px; }
 
+/* FAQ */
+.faq-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
+.faq-item { border: 1px solid #ece9e4; border-radius: 16px; padding: 26px 24px; }
+.faq-item__q { margin: 0 0 10px; font-size: 16px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.5; }
+.faq-item__q::before { content: 'Q. '; color: #c8272c; font-weight: 800; }
+.faq-item__a { margin: 0; font-size: 14px; line-height: 1.75; color: #5b5650; }
+
 /* Contact */
 .contact { background: #181614; padding: 96px 0 0; color: #fff; }
 .contact__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding-bottom: 80px; }
@@ -216,6 +223,8 @@ img { max-width: 100%; }
   .nav__links { padding-left: 20px; padding-right: 20px; }
   .process-grid { grid-template-columns: 1fr; }
   .cert-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .faq-list { grid-template-columns: 1fr; }
+  .faq-item { padding: 22px 20px; }
   .quality-panel { padding: 32px 22px; }
   .quality-item { flex-basis: 100%; }
 

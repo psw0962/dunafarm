@@ -21,7 +21,12 @@ const PACKAGING_STEPS = [
 function ProcessCard({ step }) {
   return (
     <Reveal as="div" className="process-card">
-      <img src={`/assets/${step.img}.jpg`} alt={step.title} />
+      <img
+        src={`/assets/${step.img}.jpg`}
+        alt={`두나팜 고춧가루 제조 공정 ${step.n} - ${step.title}`}
+        loading="lazy"
+        decoding="async"
+      />
       <div className="process-card__label">
         <span className="process-card__n">{step.n}</span>
         <span className="process-card__title">{step.title}</span>

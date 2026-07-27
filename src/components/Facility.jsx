@@ -4,7 +4,12 @@ export default function Facility() {
       <div className="container">
         <div className="facility__top">
           <div className="facility__image">
-            <img src="/assets/facility-main.jpg" alt="두나팜 생산 설비" />
+            <img
+              src="/assets/facility-main.jpg"
+              alt="두나팜 고춧가루 생산 설비"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div className="facility__text">
             <div className="eyebrow">ABOUT DUNAFARM</div>
@@ -20,8 +25,18 @@ export default function Facility() {
           </div>
         </div>
         <div className="facility__gallery">
-          <img src="/assets/facility-2.jpg" alt="생산라인" />
-          <img src="/assets/facility-3.jpg" alt="이송 컨베이어" />
+          <img
+            src="/assets/facility-2.jpg"
+            alt="두나팜 고춧가루 분쇄 생산라인"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="/assets/facility-3.jpg"
+            alt="두나팜 고춧가루 이송 컨베이어 설비"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="quote-banner">
           <p>&ldquo;깨끗한 생산환경이 건강한 먹거리의 시작입니다.&rdquo;</p>

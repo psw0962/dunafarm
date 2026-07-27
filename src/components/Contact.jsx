@@ -21,7 +21,12 @@ export default function Contact() {
           <div className="contact__address">경기도 화성시 만세구 향남읍 길성안길 90-8</div>
         </div>
         <div className="contact__image">
-          <img src="/assets/contact-pour.jpg" alt="두나팜 고춧가루" />
+          <img
+            src="/assets/contact-pour.jpg"
+            alt="두나팜에서 생산한 고춧가루 완제품"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
       <div className="footer">

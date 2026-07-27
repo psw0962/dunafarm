@@ -8,6 +8,7 @@ import Process from './components/Process';
 import Quality from './components/Quality';
 import Product from './components/Product';
 import Business from './components/Business';
+import Faq from './components/Faq';
 import Contact from './components/Contact';
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
       <Quality />
       <Product />
       <Business />
+      <Faq />
       <Contact />
     </>
   );

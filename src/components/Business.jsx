@@ -21,9 +21,25 @@ export default function Business() {
           <p className="section-desc">다양한 분야의 파트너와 함께 성장해 나가겠습니다.</p>
         </Reveal>
         <div className="business__collage">
-          <img className="span-2" src="/assets/business-trucks.jpg" alt="납품 차량" />
-          <img src="/assets/business-handshake.jpg" alt="파트너십" />
-          <img src="/assets/business-sacks.jpg" alt="원료 입고" />
+          <img
+            className="span-2"
+            src="/assets/business-trucks.jpg"
+            alt="두나팜 고춧가루 납품 차량"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="/assets/business-handshake.jpg"
+            alt="두나팜 거래처 파트너십"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="/assets/business-sacks.jpg"
+            alt="두나팜 건고추 원료 입고"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
       <div className="grid-4">

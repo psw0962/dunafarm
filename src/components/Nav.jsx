@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { href: '#quality', label: '품질인증' },
   { href: '#product', label: '제품' },
   { href: '#business', label: '거래분야' },
+  { href: '#faq', label: 'FAQ' },
   { href: '#contact', label: '문의' },
 ];
 
@@ -28,7 +29,13 @@ export default function Nav() {
     <nav className="nav">
       <div className="nav__inner">
         <a className="brand" href="#hero" aria-label="두나팜 DUNAFARM 홈" onClick={closeMenu}>
-          <img className="brand__logo" src="/assets/logo.png" alt="두나팜 DUNAFARM" />
+          <img
+            className="brand__logo"
+            src="/assets/logo.png"
+            alt="두나팜 DUNAFARM 고춧가루 제조"
+            width="526"
+            height="146"
+          />
         </a>
         <div id="nav-menu" className={`nav__links${isOpen ? ' is-open' : ''}`}>
           {NAV_LINKS.map((link) => (

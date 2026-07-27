@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <url>
+    <loc>https://www.dunafarm.co.kr/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.dunafarm.co.kr/assets/og-image.jpg</image:loc>
+      <image:title>두나팜 HACCP 인증 고춧가루</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dunafarm.co.kr/assets/hero-product.jpg</image:loc>
+      <image:title>두나팜 고춧가루 제품</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dunafarm.co.kr/assets/facility-main.jpg</image:loc>
+      <image:title>화성 두나팜 고춧가루 제조시설 생산 설비</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dunafarm.co.kr/assets/cert-haccp.jpg</image:loc>
+      <image:title>두나팜 HACCP 식품안전관리인증서</image:title>
+    </image:image>
+  </url>
+</urlset>

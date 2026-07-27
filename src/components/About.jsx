@@ -26,7 +26,12 @@ export default function About() {
           </p>
         </div>
         <div className="about__image">
-          <img src="/assets/about-view.png" alt="두나팜 제조시설 전경" />
+          <img
+            src="/assets/about-view.png"
+            alt="경기도 화성 두나팜 고춧가루 제조시설 전경"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
       <div className="stat-strip">

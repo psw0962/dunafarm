@@ -28,7 +28,12 @@ export default function Quality() {
         {CERTS.map((c) => (
           <Reveal as="div" className="cert-card" key={c.title}>
             <div className="cert-card__thumb">
-              <img src={`/assets/${c.img}.jpg`} alt={c.title} />
+              <img
+                src={`/assets/${c.img}.jpg`}
+                alt={`두나팜 ${c.title}`}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="cert-card__body">
               <div className="cert-card__title">{c.title}</div>

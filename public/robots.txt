@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# 주요 검색엔진 크롤러 명시 허용
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: Daum
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+Sitemap: https://www.dunafarm.co.kr/sitemap.xml
+Host: https://www.dunafarm.co.kr
