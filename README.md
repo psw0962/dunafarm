@@ -42,9 +42,29 @@ npm run build
 | `public/sitemap.xml` | 사이트맵 (이미지 사이트맵 포함) |
 | `public/assets/og-image.jpg` | SNS 공유 썸네일 (1200×630) |
 | `src/components/Faq.jsx` | FAQPage 구조화 데이터와 짝을 이루는 실제 FAQ 본문 |
+| `public/favicon.*`, `apple-touch-icon.png` | 파비콘·앱 아이콘 세트 |
+| `public/site.webmanifest` | Android 홈화면 추가용 매니페스트 |
 
 > 구조화 데이터의 FAQ 내용과 `Faq.jsx`의 내용은 항상 일치해야 합니다.
 > 페이지에 보이지 않는 FAQ를 스키마에만 넣으면 구글 리치 결과에서 제외됩니다.
+
+### 지켜야 할 제약
+
+- **제목 40자 / 설명 80자 이내** — 네이버 서치어드바이저 권장값입니다. 넘기면
+  웹마스터도구에서 경고가 뜨고 검색 결과에서 잘립니다. OG 제목·설명도 동일합니다.
+- **제품에 `Product` 타입을 쓰지 마세요.** Google은 `Product`에 `offers`(가격),
+  `review`, `aggregateRating` 중 하나를 요구합니다. 공개 판매가와 리뷰가 없는
+  B2B 제조 품목이라 충족할 수 없고, 값을 임의로 넣는 것은 Google 가이드라인
+  위반입니다. 현재는 `ItemList` + `ListItem`으로 표기해 오류 없이 품목 정보만
+  전달합니다. 향후 실제 판매가나 리뷰가 생기면 그때 `Product`로 전환하세요.
+
+### 아이콘 재생성
+
+`public/favicon.svg`를 수정했다면 나머지 아이콘도 다시 만들어야 합니다.
+macOS 기본 도구(`qlmanage`, `sips`)로 SVG를 PNG로 렌더링한 뒤,
+16/32/48px PNG를 묶어 `favicon.ico`를 생성했습니다.
+`apple-touch-icon.png`는 투명 배경이면 iOS가 검은색으로 합성하므로
+**모서리까지 꽉 찬 불투명 사각형**이어야 합니다.
 
 ## 배포 후 해야 할 일
 
