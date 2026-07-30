@@ -31,6 +31,7 @@ img { max-width: 100%; }
 .nav { position: sticky; top: 0; z-index: 100; background: rgba(255,254,252,.88); backdrop-filter: blur(10px); border-bottom: 1px solid #ece9e4; }
 .nav__inner { max-width: 1240px; margin: 0 auto; padding: 0 32px; height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; text-decoration: none; }
+.brand picture { display: flex; }
 .brand__logo { height: 38px; width: auto; display: block; }
 .nav__links { display: flex; align-items: center; gap: 2px; overflow-x: auto; flex: 1; justify-content: center; }
 .nav__link { white-space: nowrap; padding: 10px 16px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; color: #5b5650; }

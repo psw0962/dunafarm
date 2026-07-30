@@ -29,13 +29,16 @@ export default function Nav() {
     <nav className="nav">
       <div className="nav__inner">
         <a className="brand" href="#hero" aria-label="두나팜 DUNAFARM 홈" onClick={closeMenu}>
-          <img
-            className="brand__logo"
-            src="/assets/logo.svg"
-            alt="두나팜 DUNAFARM 고춧가루 제조"
-            width="136"
-            height="38"
-          />
+          {/* 모바일에서는 공간이 좁아 심볼만 노출. width/height 속성을 두면
+              두 소스의 가로세로비가 충돌하므로 크기는 CSS로만 제어한다. */}
+          <picture>
+            <source media="(max-width: 600px)" srcSet="/assets/logo-mark.svg" />
+            <img
+              className="brand__logo"
+              src="/assets/logo.svg"
+              alt="두나팜 DUNAFARM 고춧가루 제조"
+            />
+          </picture>
         </a>
         <div id="nav-menu" className={`nav__links${isOpen ? ' is-open' : ''}`}>
           {NAV_LINKS.map((link) => (
