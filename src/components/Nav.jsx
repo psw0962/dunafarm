@@ -31,10 +31,10 @@ export default function Nav() {
         <a className="brand" href="#hero" aria-label="두나팜 DUNAFARM 홈" onClick={closeMenu}>
           <img
             className="brand__logo"
-            src="/assets/logo.png"
+            src="/assets/logo.svg"
             alt="두나팜 DUNAFARM 고춧가루 제조"
-            width="526"
-            height="146"
+            width="136"
+            height="38"
           />
         </a>
         <div id="nav-menu" className={`nav__links${isOpen ? ' is-open' : ''}`}>

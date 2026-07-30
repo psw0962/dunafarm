@@ -58,13 +58,34 @@ npm run build
   위반입니다. 현재는 `ItemList` + `ListItem`으로 표기해 오류 없이 품목 정보만
   전달합니다. 향후 실제 판매가나 리뷰가 생기면 그때 `Product`로 전환하세요.
 
-### 아이콘 재생성
+### 로고와 아이콘
 
-`public/favicon.svg`를 수정했다면 나머지 아이콘도 다시 만들어야 합니다.
-macOS 기본 도구(`qlmanage`, `sips`)로 SVG를 PNG로 렌더링한 뒤,
-16/32/48px PNG를 묶어 `favicon.ico`를 생성했습니다.
-`apple-touch-icon.png`는 투명 배경이면 iOS가 검은색으로 합성하므로
-**모서리까지 꽉 찬 불투명 사각형**이어야 합니다.
+원본은 `public/assets/logo.svg`(136×38)와 `public/favicon.svg`(37×38) 두 개입니다.
+나머지는 전부 여기서 파생됩니다.
+
+| 파생 파일 | 원본 | 용도 |
+| --- | --- | --- |
+| `assets/logo.png` (544×152) | `logo.svg` | JSON-LD Organization 로고 (래스터 필요) |
+| `favicon.ico` (16/32/48) | `favicon.svg` | 브라우저 기본 요청 경로, 네이버·다음 크롤러 |
+| `favicon-96x96.png` | `favicon.svg` | 브라우저 탭 |
+| `apple-touch-icon.png` (180) | `favicon.svg` | iOS 홈화면 |
+| `web-app-manifest-192/512.png` | `favicon.svg` | Android 홈화면 |
+
+원본 SVG를 바꿨다면 파생 파일도 다시 만들어야 합니다. macOS 기본 도구
+(`qlmanage` + `sips`)만으로 가능하지만 함정이 두 개 있습니다.
+
+1. **`qlmanage`는 SVG의 `width`/`height` 속성 기준 배율로 렌더링한 뒤 좌상단
+   정렬로 정사각 패딩합니다.** 원본 크기(예: `width="37"`)를 그대로 두면 큰
+   캔버스 구석에 조그맣게 박힙니다. 래핑 SVG의 `width`/`height`를 **출력 픽셀
+   크기(예: 1024)로 명시**해야 캔버스를 꽉 채웁니다.
+2. **`favicon.svg`는 37×38로 정사각이 아닙니다.** 그대로 정사각 PNG로
+   리사이즈하면 찌그러지므로, 정사각 캔버스 중앙에 배치한 래핑 SVG를 거쳐야
+   합니다. 로고처럼 가로로 긴 이미지는 세로 중앙 배치 후 `sips -c`(중앙 크롭)로
+   정확히 잘라냅니다.
+
+`apple-touch-icon.png`와 매니페스트 아이콘은 **투명 배경이면 iOS가 검은색으로
+합성**하므로 흰 배경을 깐 불투명 사각형이어야 합니다. 매니페스트 아이콘은
+`purpose: maskable`이라 바깥이 잘릴 수 있어 마크를 캔버스의 60%로 둡니다.
 
 ## 배포 후 해야 할 일
 
